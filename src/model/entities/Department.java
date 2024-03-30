@@ -7,6 +7,8 @@ public class Department implements Serializable {
     private Integer Id;
     private String name;
 
+    public Department(){};
+
     public Department(java.lang.Integer id, java.lang.String name) {
         Id = id;
         this.name = name;
