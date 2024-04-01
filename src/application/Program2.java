@@ -15,5 +15,9 @@ public class Program2 {
         List<Department> list = new ArrayList<>();
         list = departmentDao.findAll();
         list.forEach(System.out::println);
+
+        System.out.println("========================");
+        System.out.println("Teste findById");
+        System.out.println(departmentDao.findById(4));
     }
 }
