@@ -3,6 +3,7 @@ package application;
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
+import model.entities.Seller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,13 @@ public class Program2 {
         System.out.println("========================");
         System.out.println("Teste insert");
         Department newDep = new Department(7, "Marketing");
-        departmentDao.insert(newDep);
+        //departmentDao.insert(newDep);
         System.out.println("Inserted! New id: " + newDep.getId());
+
+        System.out.println("========================");
+        Department dep = departmentDao.findById(6);
+        dep.setName("Human Resources");
+        departmentDao.update(dep);
+        System.out.println("Update completed");
     }
 }
