@@ -1,6 +1,5 @@
 package model.dao.impl;
 
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import db.DB;
 import db.DbException;
 import model.dao.DepartmentDao;

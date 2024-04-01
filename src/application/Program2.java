@@ -3,7 +3,6 @@ package application;
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
-import model.entities.Seller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +33,8 @@ public class Program2 {
         System.out.println("Update completed");
 
         System.out.println("========================");
-        departmentDao.deleteById(7);
+        departmentDao.deleteById(6);
         System.out.println("Delete completed!");
+
     }
 }
