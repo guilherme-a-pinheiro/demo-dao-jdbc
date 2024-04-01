@@ -32,5 +32,9 @@ public class Program2 {
         dep.setName("Human Resources");
         departmentDao.update(dep);
         System.out.println("Update completed");
+
+        System.out.println("========================");
+        departmentDao.deleteById(7);
+        System.out.println("Delete completed!");
     }
 }
