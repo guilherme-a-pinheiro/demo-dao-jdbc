@@ -19,5 +19,11 @@ public class Program2 {
         System.out.println("========================");
         System.out.println("Teste findById");
         System.out.println(departmentDao.findById(4));
+
+        System.out.println("========================");
+        System.out.println("Teste insert");
+        Department newDep = new Department(7, "Marketing");
+        departmentDao.insert(newDep);
+        System.out.println("Inserted! New id: " + newDep.getId());
     }
 }

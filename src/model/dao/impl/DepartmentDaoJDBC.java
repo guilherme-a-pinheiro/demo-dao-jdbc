@@ -22,7 +22,29 @@ public class DepartmentDaoJDBC implements DepartmentDao {
     }
     @Override
     public void insert(Department obj) {
+        PreparedStatement st = null;
 
+        try {
+            st = conn.prepareStatement(
+                    "INSERT INTO department (Id, Name) VALUES (?, ?)"
+            );
+            st.setInt(1, obj.getId());
+            st.setString(2, obj.getName());
+
+            int rowsAffected = st.executeUpdate();
+            if (rowsAffected == 0){
+                throw new DbException("Unexpected error!");
+            }
+            else {
+                System.out.println("Done! Rows affected: " + rowsAffected);
+            }
+        }
+        catch (SQLException e){
+            throw new DbException(e.getMessage());
+        }
+        finally {
+            DB.closeStatement(st);
+        }
     }
 
     @Override
